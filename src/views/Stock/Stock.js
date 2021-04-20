@@ -13,8 +13,8 @@ export default function Stock({ route, navigation }) {
   const isFocused = useIsFocused();
 
   useEffect(() => {
-    getStock();
     getMarket();
+    getStock();
     return () => {
       setStock([]);
     }
@@ -108,14 +108,12 @@ export default function Stock({ route, navigation }) {
           <Text style={styles.marketText}>Risk Free Rate: {riskFree}</Text>
           <Text style={styles.marketText}>Last Update: {marketLastUpdate}</Text>
         </View>
-        {/* Display search bar and some suggestion page? */}
         <View style={styles.topBtnView}>
           <TouchableOpacity style={styles.addBtn} onPress={() => navigation.navigate('AddStock')}>
             <Text>Add Stock</Text>
           </TouchableOpacity>
         </View>
       </View>
-      {/* Maybe open webview for premarket? */}
       <FlatList
         style={styles.stockList}
         data={stock}
