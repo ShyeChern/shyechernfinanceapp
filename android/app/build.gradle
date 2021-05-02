@@ -150,12 +150,6 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-        release {
-            storeFile file('financeapp.keystore')
-            storePassword '123456'
-            keyAlias 'financeapp'
-            keyPassword '123456'
-        }
     }
     buildTypes {
         debug {

@@ -24,6 +24,8 @@ export default function App() {
   useEffect(() => {
     const checkLogin = async () => {
       try {
+        // await AsyncStorage.removeItem('session');
+        // await AsyncStorage.removeItem('userId');
         let session = await getSession();
         let userId = await getUserId();
         // fetch
@@ -77,9 +79,7 @@ export default function App() {
   } else {
     if (isLogin) {
       return (
-        <authContext.Provider value={authContextValue}>
-          <MainNavigator />
-        </authContext.Provider>
+        <MainNavigator />
       );
     } else {
       return (
