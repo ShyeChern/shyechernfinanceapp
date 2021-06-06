@@ -70,7 +70,6 @@ export default function AddStock({ navigation }) {
         }),
       }).then(res => res.json())
         .then((resBody) => {
-          console.log(resBody.message);
           alert(resBody.message);
           if (resBody.result) {
             navigation.navigate('Stock', { refreshStock: true })
