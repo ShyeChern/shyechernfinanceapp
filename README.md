@@ -1,4 +1,4 @@
-# Shye Chern Finance (React Native)
+# Shye Chern Finance (React Native) (Abandoned)
 
 An investment application which can add stock into watchlist. Then, it can calculate and display stock information for you to use it as a guidance when review a stock. 
 
